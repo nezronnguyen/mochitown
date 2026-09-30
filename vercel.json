@@ -1,0 +1,7 @@
+{
+  "cleanUrls": true,
+  "rewrites": [
+    { "source": "/servers", "destination": "/servers.html" },
+    { "source": "/wiki", "destination": "/wiki.html" }
+  ]
+}

@@ -1,0 +1,275 @@
+/* =========================================================
+   MOCHI MUSIC PLAYER — Floating Mini Player
+   File: assets/music-player.css
+   ========================================================= */
+
+/* ── Container ── */
+#mochiMusicPlayer {
+  position: fixed;
+  bottom: max(20px, env(safe-area-inset-bottom));
+  right: max(16px, env(safe-area-inset-right));
+  z-index: 99999;
+  font-family: 'Outfit', 'Inter', sans-serif;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* ── Collapsed pill ── */
+#mmpCollapsed {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(18, 6, 36, 0.88);
+  border: 1px solid rgba(255, 92, 170, 0.45);
+  border-radius: 50px;
+  padding: 7px 12px 7px 8px;
+  backdrop-filter: blur(18px) saturate(160%);
+  -webkit-backdrop-filter: blur(18px) saturate(160%);
+  box-shadow: 0 6px 30px rgba(255, 92, 170, 0.25), 0 2px 8px rgba(0,0,0,0.5);
+  cursor: default;
+  transition: box-shadow 0.3s ease, transform 0.2s ease;
+  min-width: 0;
+}
+#mmpCollapsed:hover {
+  box-shadow: 0 8px 36px rgba(255, 92, 170, 0.38), 0 2px 8px rgba(0,0,0,0.5);
+  transform: translateY(-1px);
+}
+
+/* Vinyl icon */
+#mmpVinyl {
+  width: 32px;
+  height: 32px;
+  flex-shrink: 0;
+  animation: mmpSpin 4s linear infinite paused;
+}
+#mmpVinyl svg { width: 100%; height: 100%; }
+.mmp-playing #mmpVinyl { animation-play-state: running; }
+
+@keyframes mmpSpin {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+
+/* Marquee song name */
+#mmpMarqueeWrap {
+  width: 120px;
+  overflow: hidden;
+  mask-image: linear-gradient(to right, transparent 0%, black 8%, black 88%, transparent 100%);
+  -webkit-mask-image: linear-gradient(to right, transparent 0%, black 8%, black 88%, transparent 100%);
+}
+#mmpMarquee {
+  display: inline-block;
+  white-space: nowrap;
+  color: #f0d8ff;
+  font-size: 12.5px;
+  font-weight: 500;
+  animation: mmpScroll 12s linear infinite paused;
+}
+.mmp-playing #mmpMarquee { animation-play-state: running; }
+
+@keyframes mmpScroll {
+  0%   { transform: translateX(0); }
+  40%  { transform: translateX(-60%); }
+  60%  { transform: translateX(-60%); }
+  100% { transform: translateX(0); }
+}
+
+/* Pill buttons */
+#mmpPlayBtn,
+#mmpExpandBtn,
+#mmpPlayBtnBig,
+#mmpCollapseBtn,
+#mmpVolBtn {
+  background: none;
+  border: none;
+  padding: 0;
+  margin: 0;
+  cursor: pointer;
+  color: #ff5caa;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: color 0.2s, transform 0.15s;
+  flex-shrink: 0;
+}
+#mmpPlayBtn:hover,
+#mmpExpandBtn:hover { color: #ff90cc; transform: scale(1.1); }
+#mmpPlayBtn svg, #mmpExpandBtn svg { width: 18px; height: 18px; }
+#mmpExpandBtn svg { width: 14px; height: 14px; color: rgba(255,255,255,0.4); }
+#mmpExpandBtn:hover svg { color: rgba(255,255,255,0.8); }
+
+/* ── Expanded panel ── */
+#mmpExpanded {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  background: rgba(14, 5, 28, 0.94);
+  border: 1px solid rgba(255, 92, 170, 0.35);
+  border-radius: 20px;
+  padding: 20px 18px 16px;
+  width: 240px;
+  backdrop-filter: blur(24px) saturate(160%);
+  -webkit-backdrop-filter: blur(24px) saturate(160%);
+  box-shadow: 0 12px 50px rgba(255, 92, 170, 0.22), 0 4px 16px rgba(0,0,0,0.6);
+  animation: mmpSlideUp 0.25s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+#mmpExpanded.visible { display: flex; }
+
+@keyframes mmpSlideUp {
+  from { opacity: 0; transform: translateY(12px) scale(0.95); }
+  to   { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+/* Disc big */
+#mmpAlbumArea { position: relative; }
+#mmpDiscBig {
+  width: 90px;
+  height: 90px;
+  animation: mmpSpin 5s linear infinite paused;
+}
+#mmpDiscBig svg { width: 100%; height: 100%; }
+.mmp-playing #mmpDiscBig { animation-play-state: running; }
+
+/* Meta */
+#mmpMeta { text-align: center; }
+#mmpTitle {
+  color: #f0d8ff;
+  font-size: 13.5px;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+  margin-bottom: 2px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 200px;
+}
+#mmpArtist {
+  color: rgba(255,255,255,0.4);
+  font-size: 11px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+/* Progress */
+#mmpProgressWrap {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  width: 100%;
+}
+#mmpCurrent, #mmpDuration {
+  color: rgba(255,255,255,0.4);
+  font-size: 10px;
+  font-variant-numeric: tabular-nums;
+  min-width: 28px;
+}
+#mmpDuration { text-align: right; }
+
+#mmpProgressBar {
+  position: relative;
+  flex: 1;
+  height: 4px;
+  background: rgba(255,255,255,0.12);
+  border-radius: 4px;
+  cursor: pointer;
+  overflow: visible;
+}
+#mmpProgressFill {
+  position: absolute;
+  left: 0; top: 0;
+  height: 100%;
+  width: 0%;
+  background: linear-gradient(90deg, #ff5caa, #c97bff);
+  border-radius: 4px;
+  transition: width 0.25s linear;
+  pointer-events: none;
+}
+#mmpProgressThumb {
+  position: absolute;
+  top: 50%;
+  left: 0%;
+  transform: translate(-50%, -50%);
+  width: 12px;
+  height: 12px;
+  background: #ff5caa;
+  border-radius: 50%;
+  box-shadow: 0 0 6px rgba(255,92,170,0.7);
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+#mmpProgressBar:hover #mmpProgressThumb { opacity: 1; }
+
+/* Controls row */
+#mmpControls {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  width: 100%;
+}
+#mmpPlayBtnBig {
+  width: 38px;
+  height: 38px;
+  background: linear-gradient(135deg, #ff5caa, #c97bff);
+  border-radius: 50%;
+  color: white;
+  flex-shrink: 0;
+  box-shadow: 0 4px 14px rgba(255,92,170,0.4);
+  transition: transform 0.15s, box-shadow 0.15s;
+}
+#mmpPlayBtnBig:hover { transform: scale(1.08); box-shadow: 0 6px 20px rgba(255,92,170,0.55); }
+#mmpPlayBtnBig svg { width: 16px; height: 16px; }
+
+#mmpVolBtn { color: rgba(255,255,255,0.5); }
+#mmpVolBtn:hover { color: #ff5caa; }
+#mmpVolBtn svg { width: 18px; height: 18px; }
+
+/* Volume slider */
+#mmpVolSlider {
+  flex: 1;
+  -webkit-appearance: none;
+  appearance: none;
+  height: 3px;
+  border-radius: 3px;
+  background: rgba(255,255,255,0.15);
+  outline: none;
+  cursor: pointer;
+}
+#mmpVolSlider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #c97bff;
+  cursor: pointer;
+  box-shadow: 0 0 5px rgba(201,123,255,0.6);
+}
+#mmpVolSlider::-moz-range-thumb {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #c97bff;
+  border: none;
+  cursor: pointer;
+}
+
+#mmpCollapseBtn { color: rgba(255,255,255,0.35); margin-left: auto; }
+#mmpCollapseBtn:hover { color: rgba(255,255,255,0.7); }
+#mmpCollapseBtn svg { width: 16px; height: 16px; }
+
+/* Pulse ring when playing */
+#mochiMusicPlayer.mmp-playing #mmpCollapsed::before {
+  content: '';
+  position: absolute;
+  inset: -4px;
+  border-radius: 50px;
+  border: 1.5px solid rgba(255,92,170,0.35);
+  animation: mmpPulseRing 2.4s ease-out infinite;
+  pointer-events: none;
+}
+#mmpCollapsed { position: relative; }
+@keyframes mmpPulseRing {
+  0%   { opacity: 0.6; transform: scale(1); }
+  100% { opacity: 0; transform: scale(1.06); }
+}

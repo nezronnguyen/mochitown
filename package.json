@@ -1,0 +1,12 @@
+{
+  "name": "mochi-town-web",
+  "version": "1.0.0",
+  "description": "Website cho Mochi Town Discord Roleplay Server",
+  "type": "module",
+  "scripts": {
+    "start": "node server.cjs",
+    "dev": "npx vercel dev",
+    "deploy": "npx vercel --prod"
+  },
+  "dependencies": {}
+}

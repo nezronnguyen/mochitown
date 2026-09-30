@@ -1,0 +1,822 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MOCHI TOWN — SERVER ROLEPLAY</title>
+  <meta name="description"
+    content="MOCHI TOWN là server Launcher Roleplay, nơi bạn hoá thân thành công dân của thành phố Bánh Ngọt nhất Việt Nam: nhập vai, xây sự nghiệp và kết bạn trong một cộng đồng thân thiện.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="/">
+
+  <!-- Open Graph / AEO / Discord Embed -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="MOCHI TOWN">
+  <meta property="og:title" content="MOCHI TOWN — Server Launcher Roleplay">
+  <meta property="og:description"
+    content="Nhập vai, xây dựng sự nghiệp và kết bạn tại thành phố bánh ngọt nhất Việt Nam. Whitelist Roleplay, cộng đồng thân thiện, hoạt động 24/7.">
+  <meta property="og:url" content="https://mochi-town.vercel.app">
+  <meta property="og:image" content="https://mochi-town.vercel.app/assets/banner.png">
+  <meta property="og:image:secure_url" content="https://mochi-town.vercel.app/assets/banner.png">
+  <meta property="og:image:type" content="image/jpeg">
+  <meta property="og:image:width" content="1280">
+  <meta property="og:image:height" content="720">
+  <meta property="og:image:alt" content="MOCHI TOWN Roleplay Banner">
+
+  <!-- Twitter Card / Discord Large Banner -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="MOCHI TOWN — Server Launcher Roleplay">
+  <meta name="twitter:description"
+    content="Nhập vai, xây dựng sự nghiệp và kết bạn tại thành phố bánh ngọt nhất Việt Nam. Whitelist Roleplay, cộng đồng thân thiện, hoạt động 24/7.">
+  <meta name="twitter:image" content="https://mochi-town.vercel.app/assets/banner.png">
+
+  <!-- Discord Embed Border Color -->
+  <meta name="theme-color" content="#ff5caa">
+
+  <link rel="icon" type="image/png" href="./assets/logo-mochi.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com/">
+  <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
+  <link rel="stylesheet" href="./assets/style.css">
+  <link rel="stylesheet" href="./assets/design-2026.css">
+  <link rel="stylesheet" href="./assets/night-bloom-plus.css">
+  <link rel="stylesheet" href="./assets/cinematic-final.css">
+  <link rel="stylesheet" href="./assets/mochi-theme.css">
+  <link rel="stylesheet" href="./assets/music-player.css">
+
+  <!-- Structured data (AEO): tổ chức + FAQ nhanh cho các trợ lý tìm kiếm AI -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "MOCHI TOWN",
+    "url": "index.html",
+    "logo": "./assets/logo-mochi.png",
+    "sameAs": ["https://discord.gg/krftt8bA7m"],
+    "description": "Server Launcher Roleplay."
+  }
+  </script>
+</head>
+
+<body
+  bis_register="W3sibWFzdGVyIjp0cnVlLCJleHRlbnNpb25JZCI6ImVwcGlvY2VtaG1ubGJoanBsY2drb2ZjaWllZ29tY29uIiwiYWRibG9ja2VyU3RhdHVzIjp7IkRJU1BMQVkiOiJlbmFibGVkIiwiRkFDRUJPT0siOiJlbmFibGVkIiwiVFdJVFRFUiI6ImVuYWJsZWQiLCJSRURESVQiOiJlbmFibGVkIiwiUElOVEVSRVNUIjoiZW5hYmxlZCIsIklOU1RBR1JBTSI6ImVuYWJsZWQiLCJUSUtUT0siOiJkaXNhYmxlZCIsIkxJTktFRElOIjoiZW5hYmxlZCIsIkNPTkZJRyI6ImRpc2FibGVkIn0sInZlcnNpb24iOiIyLjMuMCIsInNjb3JlIjoyMDMwMDB9XQ=="
+  class="motion-ready" style="" __processed_a85eb907-a43f-4aad-9685-da607f471f40__="true">
+  <div class="ambient-stage" aria-hidden="true">
+    <div class="ambient-grid"></div>
+    <div class="ambient-orb a"></div>
+    <div class="ambient-orb b"></div>
+    <div class="ambient-orb c"></div>
+    <div class="ambient-stardust"></div>
+    <div class="ambient-beam"></div>
+    <div class="ambient-beam b2"></div>
+  </div>
+  <div class="scroll-progress" aria-hidden="true" style="transform: scaleX(0);"></div>
+  <!-- MOCHI TOWN LOADER -->
+  <div class="page-loader" aria-hidden="true">
+    <div class="mochi-loader-spin"></div>
+  </div>
+
+  <!-- MOCHI TOWN AMBIENT SAKURA PETALS -->
+  <div class="mochi-sakura-petals" aria-hidden="true">
+    <span class="sakura-petal"></span>
+    <span class="sakura-petal"></span>
+    <span class="sakura-petal"></span>
+    <span class="sakura-petal"></span>
+    <span class="sakura-petal"></span>
+    <span class="sakura-petal"></span>
+  </div>
+
+  <header class="main-header">
+    <div class="nav-container">
+      <div class="nav-left">
+        <a href="index.html" class="logo" aria-label="MOCHI TOWN — Trang chủ">
+          <span class="logo-mark">
+            <img src="./assets/logo-mochi.png" alt="Biểu trưng MOCHI TOWN" width="40" height="40">
+          </span>
+          <span class="logo-word">MOCHI TOWN</span>
+        </a>
+        <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Mở menu điều hướng" aria-expanded="false"
+          aria-controls="navLinks">
+          <span class="icon icon-open" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+              stroke-width="1.8">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5M3.75 17.25h16.5">
+              </path>
+            </svg></span>
+          <span class="icon icon-close" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+              stroke-width="1.8">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12"></path>
+            </svg></span>
+        </button>
+        <nav aria-label="Điều hướng chính">
+          <ul class="nav-links" id="navLinks">
+            <li><a href="index.html" class="nav-link" aria-current="page">Tổng Quan</a></li>
+            <li><a href="servers.html" class="nav-link">Thông Tin</a></li>
+            <li><a href="wiki.html" class="nav-link">Bộ Luật</a></li>
+          </ul>
+        </nav>
+      </div>
+      <div class="nav-right">
+        <a href="https://discord.gg/krftt8bA7m" class="discord-pill" target="_blank" rel="noopener"
+          aria-label="Discord MOCHI TOWN">
+          <span class="pill-label">Discord</span>
+        </a>
+      </div>
+    </div>
+    <div class="nav-overlay" id="navOverlay"></div>
+  </header>
+
+  <main id="main-content">
+    <!-- HERO -->
+    <section class="hero-section" aria-labelledby="hero-heading">
+      <div class="hero-scene" aria-hidden="true">
+        <span class="hero-orb o1"></span>
+        <span class="hero-orb o2"></span>
+        <span class="hero-orb o3"></span>
+        <span class="hero-orb o4"></span>
+        <span class="hero-orb o5"></span>
+      </div>
+      <div class="hero-content">
+        <p class="hero-eyebrow">
+          <span class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+              stroke-width="1.8">
+              <path stroke-linecap="round" stroke-linejoin="round"
+                d="M9.813 15.904 9 18.75l-.813-2.846a4.5 4.5 0 0 0-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 0 0 3.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 0 0 3.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 0 0-3.09 3.09Z">
+              </path>
+            </svg></span>
+          Server Launcher Roleplay
+        </p>
+        <h1 id="hero-heading" class="glowing-text text-gradient holo-text">MOCHI TOWN</h1>
+        <p class="hero-description">
+          MOCHI TOWN là thành phố bánh ngọt nơi bạn có thể tự do tạo nên câu chuyện của riêng mình —
+          nhập vai, khám phá thành phố, xây dựng sự nghiệp và kết nối cùng một cộng đồng trẻ trung,
+          luôn tràn đầy năng lượng tích cực.
+        </p>
+        <div class="hero-buttons">
+          <a href="https://drive.google.com/drive/folders/1q2hqxUWkqKIhRG2t7c8ezfaXRcDXzpuM?usp=sharing"
+            class="primary-btn holo-btn" target="_blank" rel="noopener">
+            Tải Launcher
+            <span class="icon cta-arrow" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3"></path>
+              </svg></span>
+          </a>
+          <a href="https://discord.gg/krftt8bA7m" class="secondary-btn" target="_blank" rel="noopener">
+            Tham Gia Ngay
+          </a>
+        </div>
+        <ul class="hero-stats">
+          <li class="stat-pill" id="heroServerStatus" data-state="soon"><span class="stat-dot"
+              aria-hidden="true"></span> Coming Soon</li>
+          <li class="stat-pill">
+            <span class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="1.8">
+                <path stroke-linecap="round" stroke-linejoin="round"
+                  d="M15 19.128a9.38 9.38 0 0 0 2.625.372 9.337 9.337 0 0 0 4.121-.952 4.125 4.125 0 0 0-7.533-2.493M15 19.128v-.003c0-1.113-.285-2.16-.786-3.07M15 19.128v.106A12.318 12.318 0 0 1 8.624 21c-2.331 0-4.512-.645-6.374-1.766l-.001-.109a6.375 6.375 0 0 1 11.964-3.07M12 6.375a3.375 3.375 0 1 1-6.75 0 3.375 3.375 0 0 1 6.75 0Zm8.25 2.25a2.625 2.625 0 1 1-5.25 0 2.625 2.625 0 0 1 5.25 0Z">
+                </path>
+              </svg></span>
+            Whitelist Roleplay
+          </li>
+          <li class="stat-pill">
+            <span class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="1.8">
+                <path stroke-linecap="round" stroke-linejoin="round"
+                  d="M8.625 12a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm0 0H8.25m4.125 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm0 0H12m4.125 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm0 0h-.375M21 12c0 4.556-4.03 8.25-9 8.25a9.764 9.764 0 0 1-2.555-.337A5.972 5.972 0 0 1 5.41 20.97a5.969 5.969 0 0 1-.474-.065 4.48 4.48 0 0 0 .978-2.025c.09-.457-.133-.901-.467-1.226C3.93 16.178 3 14.189 3 12c0-4.556 4.03-8.25 9-8.25s9 3.694 9 8.25Z">
+                </path>
+              </svg></span>
+            Cộng đồng thân thiện
+          </li>
+        </ul>
+      </div>
+
+      <div class="hero-visual">
+        <div class="mochi-showcase-card">
+          <!-- Card Header -->
+          <div class="showcase-header">
+            <div class="showcase-brand">
+              <img src="./assets/logo-mochi.png" alt="Mochi Town" width="28" height="28">
+              <span>MOCHI TOWN ROLEPLAY</span>
+            </div>
+            <div class="showcase-status">
+              <span class="stat-dot" aria-hidden="true"></span>
+              <span id="heroDataLabel">ĐANG HOẠT ĐỘNG</span>
+            </div>
+          </div>
+
+          <!-- Panoramic Banner Artwork -->
+          <div class="showcase-banner-frame">
+            <img src="./assets/banner.png" alt="Mochi Town City View" loading="eager" width="1280" height="720">
+            <div class="showcase-banner-tag">
+              <span>GTA V Launcher Whitelist · 24/7</span>
+            </div>
+          </div>
+
+          <!-- Card Body: Stats & Quick Connect -->
+          <div class="showcase-body">
+            <div class="showcase-stats-row showcase-coming-soon-row">
+              <div class="showcase-coming-soon">
+                <span class="coming-soon-badge">⏳ COMING SOON</span>
+                <p class="coming-soon-desc">Hệ Thống đang được phát triển<br>Thống kê trực tiếp sẽ sớm ra mắt!</p>
+              </div>
+            </div>
+            <!-- Hidden placeholders giữ ID cho live-status.js, ẩn hoàn toàn -->
+            <span id="heroPlayerCount" style="display:none" aria-live="polite"></span>
+            <span id="heroStatusRing" style="display:none"></span>
+            <span id="heroLatencyLabel" style="display:none"></span>
+            <span id="heroDataLabel" style="display:none"></span>
+
+            <!-- Quick Connect Bar -->
+            <div class="showcase-connect-bar">
+              <div class="connect-code-wrap">
+                <span class="connect-label-mini">LAUNCHER:</span>
+                <code class="connect-code-val" id="connectCommand">Mochi Town Launcher</code>
+              </div>
+              <a href="https://drive.google.com/drive/folders/1q2hqxUWkqKIhRG2t7c8ezfaXRcDXzpuM?usp=sharing"
+                class="connect-copy-btn" id="copyConnectBtn" target="_blank" rel="noopener"
+                aria-label="Tải Launcher Mochi Town">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path stroke-linecap="round" stroke-linejoin="round"
+                    d="M3 16.5v2.25A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75V16.5M16.5 12 12 16.5m0 0L7.5 12m4.5 4.5V3" />
+                </svg>
+                <span>Tải Launcher</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- HIGHLIGHTS -->
+    <section class="highlights-section" id="highlights" aria-labelledby="highlights-heading">
+      <div class="section-header reveal will-reveal is-visible">
+        <p class="section-eyebrow">
+          <span class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+              stroke-width="1.8">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M12 15a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z"></path>
+              <path stroke-linecap="round" stroke-linejoin="round"
+                d="M2.25 12c1.5-4.5 5.25-7.5 9.75-7.5s8.25 3 9.75 7.5c-1.5 4.5-5.25 7.5-9.75 7.5S3.75 16.5 2.25 12Z">
+              </path>
+            </svg></span>
+          Tham gia
+        </p>
+        <h2 id="highlights-heading">CÓ ĐIỀU GÌ THÚ VỊ TẠI <em>MOCHI TOWN</em>?</h2>
+      </div>
+
+      <div class="highlights-grid">
+        <article class="highlight-card glass-card holo-card reveal will-reveal" style="--reveal-delay: 0ms;">
+          <span class="icon highlight-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="1.8">
+              <path stroke-linecap="round" stroke-linejoin="round"
+                d="M20.25 14.15v4.07a2.25 2.25 0 0 1-1.994 2.236 48.938 48.938 0 0 1-12.512 0A2.25 2.25 0 0 1 3.75 18.22v-4.07m16.5 0a2.18 2.18 0 0 0 .75-1.661V8.706c0-1.081-.768-2.015-1.837-2.175a48.114 48.114 0 0 0-3.413-.387m4.5 8.006c-.194.165-.42.295-.673.38A23.978 23.978 0 0 1 12 15.75c-2.648 0-5.195-.429-7.577-1.22a2.016 2.016 0 0 1-.673-.38m0 0A2.18 2.18 0 0 1 3 12.489V8.706c0-1.081.768-2.015 1.837-2.175a48.111 48.111 0 0 1 3.413-.387m7.5 0V5.25A2.25 2.25 0 0 0 13.5 3h-3a2.25 2.25 0 0 0-2.25 2.25v.894m7.5 0a48.667 48.667 0 0 0-7.5 0">
+              </path>
+            </svg></span>
+          <h3>Cơ Chế Nghề Nghiệp Đa Tuyến</h3>
+          <p>MOCHI TOWN mang đến đa dạng công việc để bạn thỏa sức lựa chọn, từ những công việc tự do kiếm tiền tích lũy
+            kinh nghiệm, đến gia nhập các ban ngành trọng yếu hoặc mở chuỗi doanh nghiệp độc quyền.</p>
+          <div class="bento-career-tags">
+            <span class="career-tag">🚓 Cảnh Sát</span>
+            <span class="career-tag">🚑 Bác Sĩ</span>
+            <span class="career-tag">🔧 Xưởng Độ Xe</span>
+            <span class="career-tag">💼 Doanh Nhân</span>
+          </div>
+        </article>
+
+        <article class="highlight-card glass-card holo-card reveal will-reveal" style="--reveal-delay: 65ms;">
+          <span class="icon highlight-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="1.8">
+              <path stroke-linecap="round" stroke-linejoin="round"
+                d="M21.752 15.002A9.72 9.72 0 0 1 18 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.597.748-3.752A9.753 9.753 0 0 0 3 11.25C3 16.635 7.365 21 12.75 21a9.753 9.753 0 0 0 9.002-5.998Z">
+              </path>
+            </svg></span>
+          <h3>Thế Giới Ngầm & Cốt Truyện Riêng</h3>
+          <p>Bên dưới ánh đèn neon rực rỡ là một thế giới ngầm đầy kịch tính. Nơi những cuộc gặp gỡ, những phi vụ bí ẩn
+            và lựa chọn của bạn sẽ dẫn dắt câu chuyện sang những ngã rẽ hoàn toàn mới.</p>
+          <div class="bento-career-tags">
+            <span class="career-tag" style="border-color: rgba(255,59,148,0.4); color: #ff80b8;">🎭 Băng Đảng</span>
+            <span class="career-tag">🏎️ Đua Xe Đêm</span>
+            <span class="career-tag">⚔️ Tranh Giành Địa Bàn</span>
+          </div>
+        </article>
+
+        <article class="highlight-card glass-card holo-card reveal will-reveal" style="--reveal-delay: 130ms;">
+          <span class="icon highlight-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="1.8">
+              <path stroke-linecap="round" stroke-linejoin="round"
+                d="M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"></path>
+            </svg></span>
+          <h3>Kinh Tế Công Bằng — Không Pay-to-Win</h3>
+          <p>Không dùng tiền thật để đè bẹp người khác. MOCHI TOWN tôn vinh chất lượng nhập vai — thành quả được xây
+            dựng từ công sức, tài ngoại giao và câu chuyện nhân vật của chính bạn.</p>
+          <div class="bento-career-tags">
+            <span class="career-tag" style="border-color: rgba(0,240,255,0.4); color: #00f0ff;">🛡️ Fair-Play
+              100%</span>
+            <span class="career-tag">⚖️ Kinh Tế Cân Bằng</span>
+          </div>
+        </article>
+
+        <article class="highlight-card glass-card holo-card reveal will-reveal" style="--reveal-delay: 195ms;">
+          <span class="icon highlight-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="1.8">
+              <path stroke-linecap="round" stroke-linejoin="round"
+                d="M18 18.72a9.094 9.094 0 0 0 3.741-.479 3 3 0 0 0-4.682-2.72m.94 3.198.001.031c0 .225-.012.447-.037.666A11.944 11.944 0 0 1 12 21c-2.17 0-4.207-.576-5.963-1.584A6.062 6.062 0 0 1 6 18.719m12 0a5.971 5.971 0 0 0-.941-3.197m0 0A5.995 5.995 0 0 0 12 12.75a5.995 5.995 0 0 0-5.058 2.772m0 0a3 3 0 0 0-4.681 2.72 8.986 8.986 0 0 0 3.74.477m.941-3.197a5.971 5.971 0 0 0-.941 3.197M15 6.75a3 3 0 1 1-6 0 3 3 0 0 1 6 0Zm6 3a2.25 2.25 0 1 1-4.5 0 2.25 2.25 0 0 1 4.5 0Zm-13.5 0a2.25 2.25 0 1 1-4.5 0 2.25 2.25 0 0 1 4.5 0Z">
+              </path>
+            </svg></span>
+          <h3>Cộng Đồng Trẻ, Tôn Trọng & Nhiệt Huyết</h3>
+          <p>Thành phố vui là nơi bạn luôn tìm thấy người bạn đồng hành. Từ những cuộc gặp tình cờ tại tiệm xe đến những
+            sự kiện hội hè quy mô lớn, Mochi Town luôn tràn đầy năng lượng tích cực.</p>
+          <div class="bento-career-tags">
+            <span class="career-tag">🎙️ In-Game Voice 3D</span>
+            <span class="career-tag">🎪 Lễ Hội Tuần</span>
+            <span class="career-tag">❤️ Thân Thiện Tân Thủ</span>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- TEAM — GAMEMASTER & SUPPORT CREW -->
+    <section class="features-section" id="team" aria-labelledby="team-heading">
+      <div class="section-header reveal will-reveal">
+        <p class="section-eyebrow">
+          <span class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+              stroke-width="1.8">
+              <path stroke-linecap="round" stroke-linejoin="round"
+                d="M15 9h3.75M15 12h3.75M15 15h3.75M4.5 19.5h15a2.25 2.25 0 0 0 2.25-2.25V6.75A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25v10.5A2.25 2.25 0 0 0 4.5 19.5Zm6-10.125a1.875 1.875 0 1 1-3.75 0 1.875 1.875 0 0 1 3.75 0Zm1.294 6.336a6.721 6.721 0 0 1-3.17.789 6.721 6.721 0 0 1-3.168-.789 3.376 3.376 0 0 1 6.338 0Z">
+              </path>
+            </svg></span>
+          Đội ngũ
+        </p>
+        <h2 id="team-heading">GAMEMASTER MOCHI</h2>
+        <p>Gamemaster phụ trách toàn bộ mọi thứ trong server.</p>
+      </div>
+
+      <p class="team-status" id="team-status" data-state="info" role="status" aria-live="polite" hidden=""></p>
+
+      <!-- Main Team Grid (Dev + Owners) -->
+      <div class="features-grid team-lineup" id="main-team-grid"></div>
+
+      <!-- Support Section -->
+      <div class="support-section">
+        <div class="support-showcase" id="support-list"></div>
+      </div>
+    </section>
+
+    <!-- NEWS -->
+    <section class="news-section" id="news" aria-labelledby="news-heading">
+      <div class="section-header reveal will-reveal">
+        <p class="section-eyebrow">
+          <span class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+              stroke-width="1.8">
+              <path stroke-linecap="round" stroke-linejoin="round"
+                d="M21 11.25v8.25a1.5 1.5 0 0 1-1.5 1.5H4.5a1.5 1.5 0 0 1-1.5-1.5v-8.25M12 4.875A2.625 2.625 0 1 0 9.375 7.5H12m0-2.625V7.5m0-2.625A2.625 2.625 0 1 1 14.625 7.5H12m0 0V21m-8.25-9.75h16.5a1.125 1.125 0 0 0 1.125-1.125v-1.5a1.125 1.125 0 0 0-1.125-1.125H3.75a1.125 1.125 0 0 0-1.125 1.125v1.5A1.125 1.125 0 0 0 3.75 11.25Z">
+              </path>
+            </svg></span>
+          Bảng tin
+        </p>
+        <h2 id="news-heading">CẬP <em>NHẬT</em></h2>
+        <p>Luôn cập nhật nhanh chóng những sự kiện, hoạt động và thông tin mới nhất từ MOCHI TOWN.</p>
+      </div>
+
+      <!-- news.js sẽ tự động render bài tin từ Discord channel vào đây -->
+      <div class="news-grid" id="news-grid">
+        <p class="news-loading"
+          style="text-align:center;color:var(--colour-text-muted,#aaa);grid-column:1/-1;padding:2rem 0;">
+          Đang tải bài tin từ Discord…
+        </p>
+      </div>
+    </section>
+
+    <!-- HOW TO JOIN -->
+    <section class="join-section" id="join" aria-labelledby="join-heading">
+      <div class="section-header reveal will-reveal">
+        <p class="section-eyebrow">
+          <span class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+              stroke-width="1.8">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M12 15a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z"></path>
+              <path stroke-linecap="round" stroke-linejoin="round"
+                d="M2.25 12c1.5-4.5 5.25-7.5 9.75-7.5s8.25 3 9.75 7.5c-1.5 4.5-5.25 7.5-9.75 7.5S3.75 16.5 2.25 12Z">
+              </path>
+            </svg></span>
+          Tham gia
+        </p>
+        <h2 id="join-heading">LÀM THẾ NÀO ĐỂ GIA NHẬP <br><em>MOCHI TOWN</em></h2>
+        <p>Chỉ 4 bước siêu đơn giản để trở thành cư dân MOCHI TOWN.</p>
+      </div>
+
+      <ol class="join-steps">
+        <li class="step-card glass-card holo-card reveal will-reveal" style="--reveal-delay: 0ms;">
+
+          <span class="step-number" aria-hidden="true">01</span>
+
+          <span class="icon step-icon" aria-hidden="true">
+            <img src="./assets/logo-mochi.png" alt="Discord">
+          </span>
+
+          <h3>Vào Discord</h3>
+
+          <p>Tham gia server Discord chính thức để nhận thông tin và làm whitelist.</p>
+
+        </li>
+        <li class="step-card glass-card holo-card reveal will-reveal" style="--reveal-delay: 65ms;">
+          <span class="step-number" aria-hidden="true">02</span>
+          <span class="icon step-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+              stroke-width="1.5">
+              <path stroke-linecap="round" stroke-linejoin="round"
+                d="M16.862 4.487 18.549 2.8a2.121 2.121 0 1 1 3 3L10.582 16.766a4.5 4.5 0 0 1-1.897 1.13L6 18.75l.854-2.685a4.5 4.5 0 0 1 1.13-1.897l8.878-8.68Zm0 0L19.5 7.125M18 14v4.75A2.25 2.25 0 0 1 15.75 21H5.25A2.25 2.25 0 0 1 3 18.75V8.25A2.25 2.25 0 0 1 5.25 6H10">
+              </path>
+            </svg></span>
+          <h3>Đăng Ký Whitelist</h3>
+          <p>Điền form trả lời câu hỏi whitelist, staff duyệt trong 24h, bạn sẽ nhận role và hướng dẫn tại Discord.</p>
+        </li>
+        <li class="step-card glass-card holo-card reveal will-reveal" style="--reveal-delay: 130ms;">
+          <span class="step-number" aria-hidden="true">03</span>
+          <span class="icon step-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+              stroke-width="1.5">
+              <path stroke-linecap="round" stroke-linejoin="round"
+                d="M3 16.5v2.25A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75V16.5M16.5 12 12 16.5m0 0L7.5 12m4.5 4.5V3">
+              </path>
+            </svg></span>
+          <h3>Tải GTA V &amp; LAUNCHER</h3>
+          <p>Cài đặt bản GTA V, sau đó tải LAUNCHER và đăng nhập Steam của bạn.</p>
+        </li>
+        <li class="step-card glass-card holo-card reveal will-reveal" style="--reveal-delay: 195ms;">
+          <span class="step-number" aria-hidden="true">04</span>
+          <span class="icon step-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor">
+              <path
+                d="M17.5 6h-11A3.5 3.5 0 0 0 3 9.5v3.6a3.4 3.4 0 0 0 3.4 3.4c.9 0 1.8-.4 2.4-1.1L10 14h4l1.2 1.4c.6.7 1.5 1.1 2.4 1.1A3.4 3.4 0 0 0 21 13.1V9.5A3.5 3.5 0 0 0 17.5 6ZM10 11H8.5V12.5H7V11H5.5V9.5H7V8H8.5v1.5H10Zm4.75 1.25a1 1 0 1 1 0-2 1 1 0 0 1 0 2Zm2-2.5a1 1 0 1 1 0-2 1 1 0 0 1 0 2Z">
+              </path>
+            </svg></span>
+          <h3>Vào Game</h3>
+          <p>Kết nối LAUNCHER và bắt đầu cuộc sống mới tại MOCHI TOWN!</p>
+        </li>
+      </ol>
+
+      <p class="join-cta reveal will-reveal">
+        <a href="https://discord.gg/krftt8bA7m" class="primary-btn holo-btn" target="_blank" rel="noopener">
+          <span class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor">
+              <path
+                d="M20.317 4.369A19.79 19.79 0 0 0 15.885 3c-.213.38-.46.893-.63 1.299a18.27 18.27 0 0 0-5.51 0C9.573 3.893 9.32 3.38 9.106 3a19.736 19.736 0 0 0-4.435 1.372C1.98 8.11 1.24 11.744 1.61 15.328a19.9 19.9 0 0 0 5.993 3.03c.483-.66.913-1.362 1.282-2.098a12.89 12.89 0 0 1-2.02-.968c.17-.124.336-.253.496-.386 3.9 1.8 8.13 1.8 11.982 0 .162.135.328.264.496.386-.64.383-1.317.71-2.023.97.37.735.798 1.437 1.282 2.096a19.83 19.83 0 0 0 6-3.03c.435-4.153-.667-7.752-2.782-10.959ZM8.68 13.15c-1.17 0-2.13-1.086-2.13-2.42 0-1.334.94-2.42 2.13-2.42 1.2 0 2.15 1.096 2.13 2.42 0 1.334-.94 2.42-2.13 2.42Zm6.64 0c-1.17 0-2.13-1.086-2.13-2.42 0-1.334.94-2.42 2.13-2.42 1.2 0 2.15 1.096 2.13 2.42 0 1.334-.93 2.42-2.13 2.42Z">
+              </path>
+            </svg></span>
+          Bắt Đầu Ngay
+        </a>
+      </p>
+    </section>
+
+    <!-- FAQ -->
+    <section class="faq-section" id="faq" aria-labelledby="faq-heading">
+      <div class="section-header reveal will-reveal">
+        <p class="section-eyebrow">
+          <span class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+              stroke-width="1.8">
+              <path stroke-linecap="round" stroke-linejoin="round"
+                d="M8.625 12a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm0 0H8.25m4.125 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm0 0H12m4.125 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm0 0h-.375M21 12c0 4.556-4.03 8.25-9 8.25a9.764 9.764 0 0 1-2.555-.337A5.972 5.972 0 0 1 5.41 20.97a5.969 5.969 0 0 1-.474-.065 4.48 4.48 0 0 0 .978-2.025c.09-.457-.133-.901-.467-1.226C3.93 16.178 3 14.189 3 12c0-4.556 4.03-8.25 9-8.25s9 3.694 9 8.25Z">
+              </path>
+            </svg></span>
+          Hỏi đáp
+        </p>
+        <h2 id="faq-heading">CÂU HỎI <em>THƯỜNG GẶP</em></h2>
+        <p>Những điều bạn cần biết trước khi bắt đầu hành trình tại MOCHI TOWN.</p>
+      </div>
+
+      <div class="faq-list reveal will-reveal">
+        <div class="faq-item">
+          <h3>
+            <button type="button" class="faq-question" aria-expanded="false" aria-controls="faq-a1" id="faq-q1">
+              <span class="faq-q-wrap">
+                <span class="faq-num">01</span>
+                <span class="faq-q-text">MOCHI TOWN LÀ GÌ ?</span>
+              </span>
+              <span class="icon faq-chevron-pill" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2.2">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5"></path>
+                </svg></span>
+            </button>
+          </h3>
+          <div class="faq-answer" id="faq-a1" role="region" aria-labelledby="faq-q1">
+            <p>MOCHI TOWN là thành phố Roleplay nơi bạn có thể tự do tạo nhân vật, khám phá thành phố và viết nên câu
+              chuyện của riêng mình. Từ công việc, bạn bè đến phong cách sống, mọi lựa chọn đều do bạn quyết định.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <h3>
+            <button type="button" class="faq-question" aria-expanded="false" aria-controls="faq-a2" id="faq-q2">
+              <span class="faq-q-wrap">
+                <span class="faq-num">02</span>
+                <span class="faq-q-text">TÔI CÓ THỂ LÀM GÌ TRONG THÀNH PHỐ ?</span>
+              </span>
+              <span class="icon faq-chevron-pill" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2.2">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5"></path>
+                </svg></span>
+            </button>
+          </h3>
+          <div class="faq-answer" id="faq-a2" role="region" aria-labelledby="faq-q2">
+            <p>Bạn có thể làm việc, kiếm tiền, mua xe, xây dựng tài sản, thay đổi phong cách, kinh doanh, giao lưu với
+              mọi người hoặc tham gia các hoạt động và sự kiện trong thành phố. Muốn sống theo cách nào, bạn chọn cách
+              đó.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <h3>
+            <button type="button" class="faq-question" aria-expanded="false" aria-controls="faq-a3" id="faq-q3">
+              <span class="faq-q-wrap">
+                <span class="faq-num">03</span>
+                <span class="faq-q-text">MOCHI TOWN CÓ GÌ KHÁC BIỆT ?</span>
+              </span>
+              <span class="icon faq-chevron-pill" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2.2">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5"></path>
+                </svg></span>
+            </button>
+          </h3>
+          <div class="faq-answer" id="faq-a3" role="region" aria-labelledby="faq-q3">
+            <p>MOCHI TOWN có hệ thống nghề nghiệp đa dạng, nghề sạch, nghề "bẩn" đều có để bạn lựa chọn theo cách chơi
+              của mình. Nếu không thích cày cuốc kiếm tiền, bạn vẫn có thể tham gia các ban ngành như Cảnh sát, Bác sĩ
+              hoặc phát triển sự nghiệp tại các doanh nghiệp như sửa xe, bán xe, độ xe, nhà hàng, quán nước… Mỗi lựa
+              chọn đều mang đến một trải nghiệm Roleplay khác nhau.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <h3>
+            <button type="button" class="faq-question" aria-expanded="false" aria-controls="faq-a4" id="faq-q4">
+              <span class="faq-q-wrap">
+                <span class="faq-num">04</span>
+                <span class="faq-q-text">LÀM THẾ NÀO ĐỂ BẮT ĐẦU CHƠI ?</span>
+              </span>
+              <span class="icon faq-chevron-pill" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2.2">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5"></path>
+                </svg></span>
+            </button>
+          </h3>
+          <div class="faq-answer" id="faq-a4" role="region" aria-labelledby="faq-q4">
+            <p>Tham gia vào Discord chính thức, đăng ký Whitelist và đợi Staff duyệt trong 24h. Hãy chuẩn bị bản GTA V
+              hợp lệ và tải sẵn LAUNCHER. Khi có Whitelist, hãy đăng nhập tài khoản Rockstar &amp; Steam của bạn, sau đó
+              kết nối LAUNCHER và bắt đầu cuộc sống mới tại MOCHI TOWN.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <h3>
+            <button type="button" class="faq-question" aria-expanded="false" aria-controls="faq-a5" id="faq-q5">
+              <span class="faq-q-wrap">
+                <span class="faq-num">05</span>
+                <span class="faq-q-text">NẾU TÔI CHƯA TỪNG CHƠI ROLEPLAY THÌ BẮT ĐẦU CÓ KHÓ KHÔNG ?</span>
+              </span>
+              <span class="icon faq-chevron-pill" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2.2">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5"></path>
+                </svg></span>
+            </button>
+          </h3>
+          <div class="faq-answer" id="faq-a5" role="region" aria-labelledby="faq-q5">
+            <p>Không khó! MOCHI TOWN luôn có hướng dẫn dành cho người mới. Bạn chỉ cần làm quen với một vài quy tắc và
+              cách tương tác cơ bản, sau đó cứ thoải mái khám phá thành phố. Chưa biết gì cũng được — vào rồi sẽ biết!
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- EVENT COUNTDOWN -->
+    <section class="event-section" id="events" aria-labelledby="event-heading">
+      <div class="event-box holo-card reveal will-reveal">
+        <div class="event-left">
+          <p class="event-tag">
+            <span class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 13.5 10.5 3v7.5h9L10.5 21v-7.5h-6.75Z">
+                </path>
+              </svg></span>
+            COMING SOON
+          </p>
+          <h2 id="event-heading">MOCHI TOWN</h2>
+          <p>Thời gian cho server chuẩn bị Open</p>
+          <a href="https://discord.gg/krftt8bA7m" class="secondary-btn" target="_blank" rel="noopener">Xem chi tiết</a>
+        </div>
+
+        <div class="event-coming-soon-wrap">
+          <div class="showcase-coming-soon" style="padding: 10px 0;">
+            <span class="coming-soon-badge">⏳ COMING SOON</span>
+            <p class="coming-soon-desc">Thời gian mở máy chủ sẽ sớm được thông báo!<br>Tham gia Discord để đón chờ ngày
+              Open.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TESTIMONIALS -->
+    <!-- <section class="testimonial-section" id="testimonials" aria-labelledby="testimonial-heading">
+      <div class="section-header reveal">
+        <p class="section-eyebrow">
+          <span class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path stroke-linecap="round" stroke-linejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12Z"/></svg></span>
+          Cộng đồng
+        </p>
+        <h2 id="testimonial-heading">NGƯỜI CHƠI NÓI GÌ?</h2>
+      </div>
+      <div class="testimonial-grid">
+        <figure class="testimonial-card glass-card holo-card reveal">
+          <blockquote>Server cute nhất mình từng chơi. Staff dễ thương, không toxic, mọi người giúp đỡ nhau rất nhiều.</blockquote>
+          <figcaption>— Mochi, Cư dân 8 tháng</figcaption>
+        </figure>
+        <figure class="testimonial-card glass-card holo-card reveal">
+          <blockquote>Hệ thống việc làm và nhà ở quá mượt. Event liên tục nên lúc nào cũng có việc để làm.</blockquote>
+          <figcaption>— Kẹo Dâu, Taxi Driver</figcaption>
+        </figure>
+        <figure class="testimonial-card glass-card holo-card reveal">
+          <blockquote>Whitelist chặt nhưng đáng. Vào được rồi mới thấy cộng đồng chất lượng thật sự.</blockquote>
+          <figcaption>— Jellybean, Cảnh sát</figcaption>
+        </figure>
+      </div>
+    </section> -->
+  </main>
+  <footer>
+    <div class="footer-content">
+      <div class="footer-left">
+        <img src="./assets/logo-mochi.png" alt="Biểu trưng MOCHI TOWN" class="footer-logo" width="36" height="36"
+          loading="lazy">
+        <div class="footer-brand">
+          <span class="footer-name">MOCHI TOWN</span>
+          <span class="footer-copy">© 2026 · Made by Nezron</span>
+        </div>
+      </div>
+
+      <div class="footer-right">
+        <p class="footer-contact">
+          Mọi thắc mắc về server hãy liên hệ admin tại Discord MOCHI TOWN
+        </p>
+        <a href="https://discord.gg/krftt8bA7m" class="footer-discord" target="_blank" rel="noopener"
+          aria-label="Discord MOCHI TOWN">
+          <span class="icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="currentColor">
+              <path
+                d="M20.317 4.369A19.79 19.79 0 0 0 15.885 3c-.213.38-.46.893-.63 1.299a18.27 18.27 0 0 0-5.51 0C9.573 3.893 9.32 3.38 9.106 3a19.736 19.736 0 0 0-4.435 1.372C1.98 8.11 1.24 11.744 1.61 15.328a19.9 19.9 0 0 0 5.993 3.03c.483-.66.913-1.362 1.282-2.098a12.89 12.89 0 0 1-2.02-.968c.17-.124.336-.253.496-.386 3.9 1.8 8.13 1.8 11.982 0 .162.135.328.264.496.386-.64.383-1.317.71-2.023.97.37.735.798 1.437 1.282 2.096a19.83 19.83 0 0 0 6-3.03c.435-4.153-.667-7.752-2.782-10.959ZM8.68 13.15c-1.17 0-2.13-1.086-2.13-2.42 0-1.334.94-2.42 2.13-2.42 1.2 0 2.15 1.096 2.13 2.42 0 1.334-.94 2.42-2.13 2.42Zm6.64 0c-1.17 0-2.13-1.086-2.13-2.42 0-1.334.94-2.42 2.13-2.42 1.2 0 2.15 1.096 2.13 2.42 0 1.334-.93 2.42-2.13 2.42Z">
+              </path>
+            </svg>
+          </span>
+          <span>Discord</span>
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <button class="back-to-top" id="backToTop" aria-label="Lên đầu trang">
+    <span class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 15.75 7.5-7.5 7.5 7.5"></path>
+      </svg></span>
+  </button>
+
+  <script src="./assets/main.js"></script>
+  <script src="./assets/effects-2026.js"></script>
+  <script src="./assets/team.js"></script>
+  <script src="./assets/live-status.js"></script>
+  <script src="./assets/news.js"></script>
+
+  <!-- FAQ accordion — inline, self-contained, does NOT depend on main.js.
+       Runs on its own as soon as this script tag is parsed (it's placed
+       after the FAQ markup at the end of <body>, so the elements already
+       exist — no need to wait for DOMContentLoaded). -->
+  <script>
+    (function () {
+      var faqItems = document.querySelectorAll('.faq-item');
+      if (!faqItems.length) return;
+
+      function closeItem(item) {
+        item.classList.remove('open');
+        var trigger = item.querySelector('.faq-question');
+        var panel = item.querySelector('.faq-answer');
+        if (trigger) trigger.setAttribute('aria-expanded', 'false');
+        if (panel) panel.style.maxHeight = '0px';
+      }
+
+      function openItem(item) {
+        item.classList.add('open');
+        var trigger = item.querySelector('.faq-question');
+        var panel = item.querySelector('.faq-answer');
+        if (trigger) trigger.setAttribute('aria-expanded', 'true');
+        if (panel) panel.style.maxHeight = panel.scrollHeight + 'px';
+      }
+
+      faqItems.forEach(function (item) {
+        var trigger = item.querySelector('.faq-question');
+        var panel = item.querySelector('.faq-answer');
+        if (!trigger || !panel) return;
+
+        trigger.addEventListener('click', function () {
+          var wasOpen = item.classList.contains('open');
+          faqItems.forEach(closeItem);
+          if (!wasOpen) openItem(item);
+        });
+      });
+
+      // Keep an open panel's height correct if the window is resized.
+      window.addEventListener('resize', function () {
+        var openItemEl = document.querySelector('.faq-item.open');
+        if (!openItemEl) return;
+        var panel = openItemEl.querySelector('.faq-answer');
+        if (panel) panel.style.maxHeight = panel.scrollHeight + 'px';
+      });
+    })();
+  </script>
+
+  <!-- 🎵 MOCHI MUSIC PLAYER -->
+  <div id="mochiMusicPlayer" aria-label="Trình phát nhạc Mochi Town">
+    <!-- Collapsed pill (always visible) -->
+    <div id="mmpCollapsed">
+      <div id="mmpVinyl">
+        <svg viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="18" cy="18" r="17" fill="#1a0a2e" stroke="#ff5caa" stroke-width="1.5" />
+          <circle cx="18" cy="18" r="11" fill="#2a0f40" stroke="#ff5caa" stroke-width="0.8" stroke-dasharray="2 3" />
+          <circle cx="18" cy="18" r="3.5" fill="#ff5caa" />
+        </svg>
+      </div>
+      <div id="mmpMarqueeWrap"><span id="mmpMarquee">♪ Mochi Town BGM</span></div>
+      <button id="mmpPlayBtn" aria-label="Play / Pause">
+        <svg id="mmpIconPlay" viewBox="0 0 24 24">
+          <polygon points="5,3 19,12 5,21" fill="currentColor" />
+        </svg>
+        <svg id="mmpIconPause" viewBox="0 0 24 24" style="display:none">
+          <rect x="5" y="3" width="4" height="18" rx="1" fill="currentColor" />
+          <rect x="15" y="3" width="4" height="18" rx="1" fill="currentColor" />
+        </svg>
+      </button>
+      <button id="mmpExpandBtn" aria-label="Mở rộng player" title="Mở rộng">
+        <svg viewBox="0 0 24 24">
+          <path d="M12 5l-7 7 1.4 1.4L12 7.8l5.6 5.6L19 12z" fill="currentColor" />
+        </svg>
+      </button>
+    </div>
+
+    <!-- Expanded panel -->
+    <div id="mmpExpanded">
+      <div id="mmpAlbumArea">
+        <div id="mmpDiscBig">
+          <svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="40" cy="40" r="38" fill="#1a0a2e" stroke="url(#gr1)" stroke-width="2" />
+            <circle cx="40" cy="40" r="26" fill="#20083a" stroke="url(#gr1)" stroke-width="1" stroke-dasharray="4 5" />
+            <circle cx="40" cy="40" r="14" fill="#2a0f40" stroke="url(#gr1)" stroke-width="0.8"
+              stroke-dasharray="2 4" />
+            <circle cx="40" cy="40" r="6" fill="url(#gr1)" />
+            <defs>
+              <linearGradient id="gr1" x1="0" y1="0" x2="80" y2="80" gradientUnits="userSpaceOnUse">
+                <stop stop-color="#ff5caa" />
+                <stop offset="1" stop-color="#c97bff" />
+              </linearGradient>
+            </defs>
+          </svg>
+        </div>
+      </div>
+      <div id="mmpMeta">
+        <div id="mmpTitle">♪ Mochi Town BGM</div>
+        <div id="mmpArtist">Mochi Town Radio</div>
+      </div>
+      <div id="mmpProgressWrap">
+        <span id="mmpCurrent">0:00</span>
+        <div id="mmpProgressBar" role="slider" aria-label="Tiến trình bài nhạc">
+          <div id="mmpProgressFill"></div>
+          <div id="mmpProgressThumb"></div>
+        </div>
+        <span id="mmpDuration">0:00</span>
+      </div>
+      <div id="mmpControls">
+        <button id="mmpVolBtn" aria-label="Mute / Unmute">
+          <svg id="mmpVolIcon" viewBox="0 0 24 24">
+            <path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1-3.29-2.5-4.03v8.05c1.5-.73 2.5-2.25 2.5-4.02z"
+              fill="currentColor" />
+            <path id="mmpVolX"
+              d="M19 12c0-2.21-1.34-4.11-3.25-4.94L14.3 8.5A3.5 3.5 0 0116 12a3.5 3.5 0 01-1.7 3.5l1.45 1.44C17.66 16.11 19 14.21 19 12z"
+              fill="currentColor" />
+          </svg>
+        </button>
+        <input id="mmpVolSlider" type="range" min="0" max="100" value="70" aria-label="Âm lượng">
+        <button id="mmpPlayBtnBig" aria-label="Play / Pause">
+          <svg id="mmpIconPlayBig" viewBox="0 0 24 24">
+            <polygon points="5,3 19,12 5,21" fill="currentColor" />
+          </svg>
+          <svg id="mmpIconPauseBig" viewBox="0 0 24 24" style="display:none">
+            <rect x="5" y="3" width="4" height="18" rx="1" fill="currentColor" />
+            <rect x="15" y="3" width="4" height="18" rx="1" fill="currentColor" />
+          </svg>
+        </button>
+        <button id="mmpCollapseBtn" aria-label="Thu gọn" title="Thu gọn">
+          <svg viewBox="0 0 24 24">
+            <path d="M12 19l7-7-1.4-1.4L12 16.2l-5.6-5.6L5 12z" fill="currentColor" />
+          </svg>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Hidden audio element -->
+  <audio id="mochiAudio" loop preload="auto">
+    <source src="./assets/Mochi Town.mp3" type="audio/mpeg">
+  </audio>
+  <div class="cursor-glow active" aria-hidden="true" style="transform: translate(1029px, 504px) translate(-50%, -50%);">
+  </div><canvas id="cinematicCanvas" aria-hidden="true" width="1875" height="947"></canvas>
+  <script src="./assets/music-player.js" defer></script>
+</body>
+
+</html>

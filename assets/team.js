@@ -42,7 +42,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const card = document.createElement('article');
     card.className = isSupportCrew
       ? 'support-card glass-card reveal will-reveal'
-      : 'feature-card glass-card holo-card reveal will-reveal';
+      : 'feature-card glass-card holo-card';
 
     // Avatar container
     const imageWrap = document.createElement('div');
